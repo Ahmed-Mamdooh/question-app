@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import "./App.css";
+import Overlay from "./overlay";
+import Questions from "./Questions";
+// import { useState } from "react";
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="page">
+      <img src={require("./images/blob 5.png")} className="image-1" alt="" />
+      <img src={require("./images/blob-5.png")} className="image-2" alt="" />
+      {/* <Overlay /> */}
+      <Questions />
     </div>
   );
 }
-
-export default App;
+/*
+cd Documents && cd react-question-app && cd question-app && npm start
+*/

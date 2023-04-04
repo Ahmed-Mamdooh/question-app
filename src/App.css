@@ -1,38 +1,133 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Lato:ital,wght@0,300;0,400;0,900;1,300;1,900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter";
+  overflow-x: hidden;
+}
+
+.page .questions .container .question .choose-list button.wrong-answer, .page .questions .container .question .choose-list button.true-answer, .page .questions .container .question .choose-list button.chosen {
+  border-color: transparent;
+  cursor: not-allowed;
+}
+
+.page {
+  overflow: hidden;
+  background-color: #f5f7fb;
+}
+.page .image-1 {
+  right: 0;
+  position: absolute;
+  top: 0;
+}
+.page .image-2 {
+  position: absolute;
+  bottom: 0;
+}
+.page .content-introduction {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page .content-introduction h1 {
+  font-weight: 700;
+  text-transform: capitalize;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.page .content-introduction p {
+  font-weight: 500;
+  text-align: start;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.page .content-introduction button {
+  background: #4d5b9e;
+  border-radius: 15px;
   color: white;
+  width: 193px;
+  height: 52px;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
+.page .questions .container {
+  max-width: 625px;
+  margin: 50px auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.page .questions .container .question {
+  margin-bottom: 20px;
 }
+.page .questions .container .question p {
+  font-weight: 700;
+  color: #293264;
+}
+.page .questions .container .question .choose-list {
+  display: flex;
+  gap: 15px;
+}
+.page .questions .container .question .choose-list button {
+  font-size: 1rem;
+  font-weight: 500;
+  border: 0.79px solid #4d5b9e;
+  background-color: transparent;
+  border-radius: 8px;
+  width: 105.472px;
+  height: 33.04px;
+  text-transform: capitalize;
+}
+.page .questions .container .question .choose-list button.chosen {
+  background-color: #d6dbf5;
+}
+.page .questions .container .question .choose-list button.true-answer {
+  background: #94d7a2;
+}
+.page .questions .container .question .choose-list button.true-answer:hover {
+  background-color: #94d7a2;
+}
+.page .questions .container .question .choose-list button.wrong-answer {
+  background: #f8bcbc;
+  color: #8f94af;
+}
+.page .questions .container .question .choose-list button.wrong-answer:hover {
+  background-color: #f8bcbc;
+}
+.page .questions .container .question .choose-list button.not-chosen {
+  color: #8f94af;
+  border-color: #8f94af;
+  cursor: not-allowed;
+}
+.page .questions .container .question .choose-list button.not-chosen:hover {
+  background-color: transparent;
+}
+.page .questions .container .question .choose-list button:hover {
+  background-color: #d6dbf5;
+}
+.page .questions .container .question hr {
+  height: 1px;
+  background-color: #dbdef0;
+  border: none;
+  max-width: 700px;
+  margin-left: 0;
+  margin-top: 15px;
+}
+.page .finish {
+  background-color: #4d5b9e;
+  width: 150px;
+  height: 45px;
+  border: navajowhite;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 15px;
+  margin: auto;
+  display: block;
+}
+.page .end {
+  display: flex;
+}
+.page .end .result {
+  color: #293264;
+  font-weight: 700;
+  text-transform: capitalize;
+}/*# sourceMappingURL=App.css.map */

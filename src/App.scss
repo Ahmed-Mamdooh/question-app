@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Lato:ital,wght@0,300;0,400;0,900;1,300;1,900&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Inter";
+  overflow-x: hidden;
+}
+%button-main-style {
+  border-color: transparent;
+  cursor: not-allowed;
+}
+@mixin on-hover($color) {
+  &:hover {
+    background-color: $color;
+  }
+}
+.page {
+  overflow: hidden;
+  background-color: #f5f7fb;
+  .image-1 {
+    right: 0;
+    position: absolute;
+    top: 0;
+  }
+  .image-2 {
+    position: absolute;
+    bottom: 0;
+  }
+  .content-introduction {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    h1 {
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+    p {
+      font-weight: 500;
+      text-align: start;
+    }
+    button {
+      background: #4d5b9e;
+      border-radius: 15px;
+      color: white;
+      width: 193px;
+      height: 52px;
+      font-size: 1.5rem;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  .questions {
+    .container {
+      max-width: 625px;
+      margin: 50px auto;
+      .question {
+        margin-bottom: 20px;
+        p {
+          font-weight: 700;
+          color: #293264;
+        }
+        .choose-list {
+          display: flex;
+          // justify-content: space-between;
+          gap: 15px;
+          button {
+            font-size: 1rem;
+            font-weight: 500;
+            border: 0.79px solid #4d5b9e;
+            background-color: transparent;
+            border-radius: 8px;
+            width: calc(65.92px * 1.6);
+            height: calc(20.65px * 1.6);
+            text-transform: capitalize;
+
+            &.chosen {
+              @extend %button-main-style;
+              background-color: #d6dbf5;
+            }
+            &.true-answer {
+              @extend %button-main-style;
+              background: #94d7a2;
+              @include on-hover(#94d7a2);
+            }
+            &.wrong-answer {
+              @extend %button-main-style;
+              background: #f8bcbc;
+              color: #8f94af;
+              @include on-hover(#f8bcbc);
+            }
+            &.not-chosen {
+              color: #8f94af;
+              border-color: #8f94af;
+              cursor: not-allowed;
+              @include on-hover(transparent);
+            }
+            &:hover {
+              background-color: #d6dbf5;
+            }
+          }
+        }
+        hr {
+          height: 1px;
+          background-color: #dbdef0;
+          border: none;
+          max-width: 700px;
+          margin-left: 0;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+  .finish {
+    background-color: #4d5b9e;
+    width: 150px;
+    height: 45px;
+    border: navajowhite;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    margin: auto;
+    display: block;
+  }
+  .end {
+    display: flex;
+    .result {
+      color: #293264;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+  }
+}
