@@ -65,7 +65,6 @@ body {
         }
         .choose-list {
           display: flex;
-          // justify-content: space-between;
           gap: 15px;
           button {
             font-size: 1rem;
@@ -73,12 +72,17 @@ body {
             border: 0.79px solid #4d5b9e;
             background-color: transparent;
             border-radius: 8px;
-            width: calc(65.92px * 1.6);
-            height: calc(20.65px * 1.6);
+            width: 150px;
+            min-height: 40px;
+            height: auto;
             text-transform: capitalize;
+            &:hover {
+              background-color: #d6dbf5;
+            }
 
             &.chosen {
               @extend %button-main-style;
+              border-color: #d6dbf5;
               background-color: #d6dbf5;
             }
             &.true-answer {
@@ -118,7 +122,8 @@ body {
     background-color: #4d5b9e;
     width: 150px;
     height: 45px;
-    border: navajowhite;
+    border: none;
+    cursor: pointer;
     color: white;
     font-size: 1.1rem;
     border-radius: 15px;

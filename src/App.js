@@ -1,7 +1,6 @@
 import "./App.css";
 import Overlay from "./overlay";
 import Questions from "./Questions";
-// import { useState } from "react";
 export default function App() {
   return (
     <div className="page">
